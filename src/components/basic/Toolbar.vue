@@ -27,19 +27,16 @@
                 layout 
                 py-2 >
 
-                <v-btn 
-                    v-ripple
+                <router-link
                     v-for="(item, index) in toolbarItems"
                     :key="index"
-                    class="default v-btn--simple" 
-                    icon>
-                        <router-link 
-                            :to="item.routeName">
-                            <v-icon color="tertiary">{{item.icon}}</v-icon>
-                        </router-link>
-                    
-                </v-btn>
+                    class="toolbar-items"
+                    v-ripple
+                    to="/">
+                        <v-icon color="tertiary">{{item.icon}}</v-icon>
+                </router-link>
 
+               
                   
             </v-flex>
 
